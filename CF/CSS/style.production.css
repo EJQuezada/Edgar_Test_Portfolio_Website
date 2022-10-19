@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --teal: #caebf2;
   --blue: #6495ed;
@@ -10,7 +17,8 @@
 }
 
   * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   }
 
   .profile__portrait {
@@ -18,14 +26,14 @@
   }
 
   body {
-    var(--bodyweight);
+    body: --bodyweight;
     background-color: var(--teal);
   }
 
   main {
     font-family: 'Lato', sans-serif;
     background-color:  var(--teal);
-    var(--bodyweight);
+    body: --bodyweight;
   }
 
   h1, h2, h3 {
@@ -92,7 +100,11 @@
     border-radius: 3px;
     /* width of the border, type, color */
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
   transition-property: opacity;
   }
 
@@ -107,6 +119,8 @@ button:focus,
   }
 
   .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: auto;
     padding: 20px;
@@ -114,8 +128,13 @@ button:focus,
 
   .page-footer {
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
 
@@ -127,7 +146,8 @@ button:focus,
   }
 
   .links {
-    justify-self: left;
+    -ms-grid-column-align: left;
+        justify-self: left;
   }
 
   .links-list {
@@ -136,7 +156,9 @@ button:focus,
   }
 
   .grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 2em 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
     margin: 2em;
@@ -155,7 +177,9 @@ button:focus,
     width: 100%;
     display: justify-flex;
     float: right;
-    justify-content: justify;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: justify;
     margin: 5px 10px;
   }
 
@@ -169,6 +193,7 @@ button:focus,
 
   @media all and (max-width: 500px) {
       .grid {
+        -ms-grid-columns: 1fr 10px 1fr;
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
       }
@@ -194,44 +219,86 @@ button:focus,
   }
 
   .sun {
-    animation-duration: 4s;
-    animation-name: color-change;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-name: color-change;
+            animation-name: color-change;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  @-webkit-keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
   }
 
   @keyframes cloud-move {
     from {
-      transform: translate(0, 50px);
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
     }
     to {
-      transform: translate(200px, 50px);
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
     }
   }
 
   .cloud-front {
-    animation-duration: 30s;
-    animation-name: cloud-move;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+    -webkit-animation-name: cloud-move;
+            animation-name: cloud-move;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+
+  @-webkit-keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
   }
 
 
   @keyframes cloud-move-reverse {
       from {
-        transform: translate(446px, 48px);
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
       }
       to {
-        transform: translate(100px, 48px);
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
       }
   }
 
   .cloud-back {
-    animation-duration: 34s;
-    animation-name: cloud-move-reverse;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 34s;
+            animation-duration: 34s;
+    -webkit-animation-name: cloud-move-reverse;
+            animation-name: cloud-move-reverse;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
   }
