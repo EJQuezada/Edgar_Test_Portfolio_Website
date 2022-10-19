@@ -145,6 +145,25 @@ button:focus,
     justify: left;
   }
 
+  table {
+    display: table;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: #02a9ea;
+  }
+
+  table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table, th, td {
+    border: 3px solid #02a9ea;
+    width: 50%;
+  }
+
   .links {
     -ms-grid-column-align: left;
         justify-self: left;
