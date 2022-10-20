@@ -1,0 +1,324 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+  --teal: #caebf2;
+  --blue: #6495ed;
+  --white: #faf0e6;
+  --olive: #357b70;
+  --orange: #e0b354;
+  --black: #2b2b2b;
+  --lightgray: #D3D3D3;
+  --skyblue: #02a9ea;
+  --bodyweight: 400; font-size: 16px; font-family: 'Lato', sans-serif; line-height: 1.6; display: block; text-align: justify;
+}
+
+  * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  }
+
+  .profile__portrait {
+    float: left;
+  }
+
+  body {
+    body: --bodyweight;
+    background-color: var(--teal);
+  }
+
+  main {
+    font-family: 'Lato', sans-serif;
+    background-color:  var(--teal);
+    body: --bodyweight;
+  }
+
+  h1, h2, h3 {
+    font-family:'Lato', sans-serif, monospace;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  a:hover, a:focus {
+    /* No underlining when hovering over a link */
+    text-decoration: none;
+  }
+
+  button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: var(--olive);
+    color: var(--white);
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .button__secondary {
+      background-color: var(--orange);
+      color: var(--black);
+    }
+
+  button:hover, button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+  }
+
+  .button, button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    /* styles the button */
+    background-color: var(--olive);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /*lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /*reducse the opacity of the button to 80% */
+  opacity: 0.8;
+  }
+
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    padding: 20px;
+  }
+
+  .page-footer {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .Home_Photo {
+    border-radius: 50%;
+    width:150px;
+    height:150px;
+    justify: left;
+  }
+
+  table {
+    display: table;
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: var(--skyblue);
+  }
+
+  table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table, th, td {
+    border: 3px solid #02a9ea;
+    width: 50%;
+  }
+
+  .links {
+    -ms-grid-column-align: left;
+        justify-self: left;
+  }
+
+  .links-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2em 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin: 2em;
+  }
+
+  .grid__item {
+    background-color: var(--lightgray);
+    display: inline-block;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+  }
+
+  nav ul {
+    list-style: inline-block;
+    width: 100%;
+    display: justify-flex;
+    float: right;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: justify;
+    margin: 5px 10px;
+  }
+
+  nav li {
+    display: inline-block;
+    margin: 1.4em 1em 1em 1em;
+    padding: 10px;
+    float: right;
+
+  }
+
+  @media all and (max-width: 500px) {
+      .grid {
+        -ms-grid-columns: 1fr 10px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 22px;
+      }
+  }
+
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #fcffad;
+    }
+    100% {
+      fill: #f76414;
+    }
+  }
+
+  .sun {
+    -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+    -webkit-animation-name: color-change;
+            animation-name: color-change;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+  @-webkit-keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
+  }
+
+  @keyframes cloud-move {
+    from {
+      -webkit-transform: translate(0, 50px);
+              transform: translate(0, 50px);
+    }
+    to {
+      -webkit-transform: translate(200px, 50px);
+              transform: translate(200px, 50px);
+    }
+  }
+
+  .cloud-front {
+    -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+    -webkit-animation-name: cloud-move;
+            animation-name: cloud-move;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+
+
+  @-webkit-keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+  }
+
+
+  @keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+  }
+
+  .cloud-back {
+    -webkit-animation-duration: 34s;
+            animation-duration: 34s;
+    -webkit-animation-name: cloud-move-reverse;
+            animation-name: cloud-move-reverse;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
