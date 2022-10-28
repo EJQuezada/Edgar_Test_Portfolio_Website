@@ -14,7 +14,7 @@
   --black: #2b2b2b;
   --lightgray: #D3D3D3;
   --skyblue: #02a9ea;
-  --bodyweight: 400; font-size: 16px; font-family: 'Lato', sans-serif; line-height: 1.6; display: block; text-align: justify;
+  --bodyweight: 400; font-size: 16px; font-family: 'Lato', sans-serif; line-height: 1.6; display: flex; text-align: justify;
 }
 
   * {
@@ -44,6 +44,7 @@
   h1 {
     font-size: 22px;
     font-weight: 700;
+    text-align: center;
   }
 
   h2 {
@@ -193,7 +194,7 @@ button:focus,
   }
 
   nav ul {
-    list-style: inline-block;
+    list-style: inline-flex;
     width: 100%;
     display: justify-flex;
     float: right;
@@ -204,11 +205,10 @@ button:focus,
   }
 
   nav li {
-    display: inline-block;
+    display: inline-flex;
     margin: 1.4em 1em 1em 1em;
     padding: 10px;
     float: right;
-
   }
 
   @media all and (max-width: 500px) {
