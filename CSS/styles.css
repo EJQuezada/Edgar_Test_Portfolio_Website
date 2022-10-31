@@ -20,6 +20,9 @@
   body {
     var(--bodyweight);
     background-color: var(--teal);
+    width: 975;
+    clear: both;
+    flex-direction: column;
   }
 
   main {

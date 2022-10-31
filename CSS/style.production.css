@@ -14,7 +14,7 @@
   --black: #2b2b2b;
   --lightgray: #D3D3D3;
   --skyblue: #02a9ea;
-  --bodyweight: 400; font-size: 16px; font-family: 'Lato', sans-serif; line-height: 1.6; display: block; text-align: justify;
+  --bodyweight: 400; font-size: 16px; font-family: 'Lato', sans-serif; line-height: 1.6; display: flex; text-align: justify;
 }
 
   * {
@@ -28,6 +28,9 @@
 
   body {
     body: --bodyweight;
+    clear: both;
+    flex-direction: column;
+    width: 975;
     background-color: var(--teal);
   }
 
@@ -35,6 +38,7 @@
     font-family: 'Lato', sans-serif;
     background-color:  var(--teal);
     body: --bodyweight;
+    width: 975;
   }
 
   h1, h2, h3 {
@@ -55,6 +59,10 @@
   h3 {
     font-size: 18px;
     font-weight: 700;
+  }
+
+  contact-form {
+    float: center;
   }
 
   a:hover, a:focus {

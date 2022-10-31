@@ -9,31 +9,26 @@
 </head>
 
 <body>
-	<div>
-		<nav>
-		 <ul role="menubar" class="navigation-list">
-				<li role="presentation">
-					 <a href="index.html" role="menuitem" class="navigation-list__item--active">Home</a>
-				</li>
-				<li role="presentation">
-					 <a href="about_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">About</a>
-				</li>
-				<li role="presentation">
-					<a href="contact_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">Contact</a>
-				</li>
-				<li role="presentation">
-				<a href="work_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">Work</a>
-				</li>
-			</ul>
-		 </nav>
+		<header class="page-header">
+			<img src="img/EQ_monogram.png" class="monogram" alt="my monogram initials" width="98" height="98">
 
-		<h1>
-			<img src="img/EQ_monogram.png" class="monogram" alt="my monogram initials" width="128" height="128">
-			<p>Edgar Quezada</p>
-
-		</h1>
-
-		</div>
+			<nav>
+				 <ul role="menubar" class="navigation-list">
+							<li role="presentation">
+								 	<a href="index.html" role="menuitem" class="navigation-list__item--active">Home</a>
+							</li>
+							<li role="presentation">
+								 	<a href="about_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">About</a>
+							</li>
+							<li role="presentation">
+									<a href="contact_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">Contact</a>
+							</li>
+							<li role="presentation">
+									<a href="work_Edgar_Quezada.html" role="menuitem" class="navigation-list__item">Work</a>
+							</li>
+					</ul>
+			 </nav>
+		 </header>
 
 	<body>
 	<h2>Contact Me!</h2>
@@ -47,37 +42,47 @@
 	</main>
 
 	<div>
-		CareerFoundry GmbH<br>
-		Köpenicker Str. 126 <br>
- 		10179 Berlin<br>
-  	Deutschland<br>
-  	<br>
-  	Tel  <a href="tel:+493048492016">+49 30 4849 2016</a> <br>
-  	Skype <a href="skype:hello.careerfoundry">hello.careerfoundry</a> <br>
-  	<a href="mailto:office@careerfoundry.com">Contact Me</a>
-	</div>
+		<div class="section__color-wrapper ">
+			<div class="container ">
+				<div class="content-box content-box--medium content-box--text-center content-box--center text-container">
+					<h3 class="heading h2">Mailing Address </h3>
+					<p>
+						CareerFoundry GmbH<br>
+						Köpenicker Str. 126 <br>
+ 						10179 Berlin<br>
+  					Deutschland<br>
+  					<br>
+					</p>
+					<p>
+  				Tel  <a href="tel:+493048492016">+49 30 4849 2016</a> <br>
+  				Skype <a href="skype:hello.careerfoundry">hello.careerfoundry</a> <br>
+					</p>
+				  	<a href="mailto:office@careerfoundry.com">Contact Me</a>
+					</div>
 
 	&nbsp;&nbsp;
 
-	<form action="" method="post" id="contact-form">
-		<p>
-  		<label class="standard-label" for="contact-email">E-mail: </label>
-  		<input type="email" id="contact-email" required>
-		</p>
-		&nbsp;&nbsp;
-		<p>
-			<label class="standard-label" for="tel">Telephone: </label>
-  		<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-		</p>
-		&nbsp;&nbsp;
-  	<p>
-			<label class="standard-label">Message: </label>
-  		<textarea required maxlength="240" required></textarea>
-		</p>
-		&nbsp;&nbsp;
-  	<input type="submit" value="Send message">
+	<div class="content-box content-box--medium content-box--text-center content-box--center text-container">
+		<form action="" method="post" id="contact-form">
+			<p>
+	  		<label class="standard-label" for="contact-email">E-mail: </label>
+	  		<input type="email" id="contact-email" required>
+			</p>
+			&nbsp;&nbsp;
+			<p>
+				<label class="standard-label" for="tel">Telephone: </label>
+	  		<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+			</p>
+			&nbsp;&nbsp;
+	  	<p>
+				<label class="standard-label">Message: </label>
+	  		<textarea required maxlength="240" required></textarea>
+			</p>
+			&nbsp;&nbsp;
+	  	<input type="submit" value="Send message">
 
-	</form>
+		</form>
+	</div>
 
 
 	<footer class="page-footer">
